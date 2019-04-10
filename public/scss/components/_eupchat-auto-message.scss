@@ -1,0 +1,9 @@
+.eupchat-auto-message{
+  position: relative;
+  .popup-message-template{
+    background: $c-silver;
+    position: absolute;
+    bottom: 100%;
+    left: 0px;
+  }
+}

@@ -1,0 +1,75 @@
+
+$c-black: #000000;
+$c-black-light: #323232;
+$c-red: #c63c2c;
+$c-green: #004873;
+$c-green-lighter: #006dae;
+$c-green-hover: #097cc0;
+$c-green-active: #0a86cf;
+$c-green-hover: #b2d3e7;
+$c-medium-sea-green:MediumSeaGreen;
+$c-green-highlight: #246b95;
+$c-gray: #41364c;
+$c-gray-light: #63696a;
+$c-gray-highlight: #f8f8f8;
+$c-silver: #e4e4e4;
+$c-silver-lighter: #f1f1f1;
+$c-white: #FFFFFF;
+$c-tr-odd: #fffdf1;
+$c-border-gray: #c1c1c1;
+$c-gray-blue: #528db1;
+$c-yellow-light: #FEF6DD;
+$c-orange: #ea7a16;
+$c-bar-table: #e4e4e4;
+$c-thead: #e2e2e2;
+$c-warning: #ffc107;
+
+$c-menu: $c-white;
+$c-menu-hover : $c-red;
+
+$c-table-clumn-head: #d6d8db;
+$c-active : $c-red;
+
+$color-border: $c-gray-light;
+
+$c-link : $c-black;
+$c-link-hover : $c-red;
+
+$c-main: $c-black;
+
+
+$bg-white: $c-white;
+$bg-input: $c-silver-lighter;
+
+$opacity: 0.3;
+
+/* Break point */
+$bp-small: 480px;
+$bp-mobile: 991px;
+$bp-tablet: 991px;
+$bp-laptop: 1279px;
+$bp-desktop: 1399px;
+
+/* text */
+$text-height: 1.42857143;
+
+$header-height: 44px;
+
+
+$sidebar-left-width: 400px;
+$sidebar-left-width-smaller: 320px;
+$sidebar-left-width-mobile: 300px;
+$sidebar-right-larg-width: 250px;
+$sidebar-right-medium-width: 112px;
+$sidebar-right-small-width: 40px;
+
+
+$z-index-level-1: 10;
+$z-index-level-2: 20;
+$z-index-level-3: 30;
+$z-index-level-4: 40;
+$z-index-level-5: 50;
+$z-index-level-5: 50;
+$z-index-level-6: 60;
+$z-index-level-7: 70;
+$z-index-level-8: 80;

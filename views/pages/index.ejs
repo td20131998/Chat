@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatJS</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body id="eup-chat-service">
+<%= language.getText('Notification title')%>
+<script>
+    window.eupChatInit = function() {
+        eupAppChatClient.init('ha1','ha1');
+    }
+</script>
+<script src="http://localhost:3000/js/client.js?lang=VN&callback=eupChatInit"></script>
+
+</body>
+</html>

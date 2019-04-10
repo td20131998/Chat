@@ -1,0 +1,294 @@
+/* Variables */
+/* Break point */
+/* text */
+/* Mixin */
+/* Mixin style */
+/* animation */
+/* appearance */
+/* border radius */
+/* box-shadow */
+/* custome font */
+/* filter */
+/* transform */
+/* transition */
+/* placeholder */
+/* opacity */
+/* breakpoint with one condition(min or max) */
+/* breakpoint with two conditions (min and max) */
+/*global*/
+#eupchat {
+  background-color: white;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999;
+  width: 700px;
+  height: 520px;
+  min-width: 700px;
+  min-height: 520px;
+  border: 1px solid #41364c;
+  resize: both;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+  #eupchat.max {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important; }
+  #eupchat.min {
+    bottom: 10px !important;
+    right: 10px !important;
+    width: 700px;
+    height: 520px; }
+  #eupchat.close-w {
+    top: unset !important;
+    left: unset !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    width: 400px !important;
+    height: 30px !important;
+    min-width: 0px;
+    min-height: 0px; }
+    #eupchat.close-w #eupchat-main-chat {
+      display: none; }
+  #eupchat #eupchat-main-chat {
+    display: table; }
+  #eupchat .eupchat-left {
+    display: table-cell;
+    vertical-align: top;
+    width: 250px;
+    border: solid 1px #d9d9d9; }
+  #eupchat .eupchat-right {
+    display: table-cell;
+    vertical-align: top; }
+    #eupchat .eupchat-right #eupchat-tool {
+      padding-top: 30px;
+      background: white; }
+      #eupchat .eupchat-right #eupchat-tool .eupchat-upload-image {
+        position: relative;
+        float: left;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        background-image: url("/public/images/icon-all.png");
+        background-position: -31px -419px;
+        margin-right: 5px;
+        top: -30px; }
+        #eupchat .eupchat-right #eupchat-tool .eupchat-upload-image input {
+          opacity: 0.0;
+          width: 100%;
+          height: 100%;
+          position: absolute; }
+      #eupchat .eupchat-right #eupchat-tool .eupchat-upload-file {
+        position: relative;
+        float: left;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        background-color: #c63c2c;
+        margin-right: 5px;
+        top: -30px; }
+        #eupchat .eupchat-right #eupchat-tool .eupchat-upload-file input {
+          opacity: 0.0;
+          position: absolute;
+          width: 100%;
+          height: 100%; }
+  #eupchat #eupchat-header {
+    cursor: move;
+    background-color: #0a86cf;
+    padding-left: 20px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold; }
+    #eupchat #eupchat-header .eupchat-min-max-control {
+      float: right;
+      cursor: pointer; }
+  #eupchat .eupchat-min-max-control {
+    float: right; }
+    #eupchat .eupchat-min-max-control img {
+      height: 16px;
+      margin: 5px; }
+  #eupchat #eupchat-my-account {
+    float: left;
+    margin: 5px 10px; }
+
+#eupchat #history {
+  background: #FFF;
+  border: 2px solid #eb5424;
+  height: 350px; }
+#eupchat #main-chat {
+  width: 100%; }
+#eupchat div.messages {
+  background-color: white;
+  overflow: auto;
+  height: 295px; }
+#eupchat .count-message {
+  color: red;
+  margin-left: 10px; }
+#eupchat .room_title {
+  background-color: darkgreen;
+  color: #ffffff;
+  font-weight: bold;
+  padding-left: 30px;
+  height: 25px; }
+#eupchat #chat-rooms-container {
+  background-color: #ffffff;
+  width: 100%;
+  height: 350px;
+  position: relative; }
+#eupchat .chat-header {
+  background-color: #528db1;
+  padding-left: 10px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: move; }
+#eupchat #formUploadfile {
+  float: left;
+  height: 40px;
+  padding: 8px;
+  min-width: 300px; }
+#eupchat #btnUploadfile {
+  float: left;
+  margin: 5px; }
+
+#eupchat-main-chat {
+  position: relative;
+  height: calc(100% - 40px);
+  overflow: hidden; }
+
+#eupchat #chat-rooms-container .chatbox {
+  display: none !important; }
+  #eupchat #chat-rooms-container .chatbox.chatbox-active {
+    display: block !important; }
+#eupchat #chat-rooms-container .chatbox {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  /* margin: 10px; */
+  /* border: 1px solid #302F31; */
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+  #eupchat #chat-rooms-container .chatbox .message {
+    width: 320px;
+    top: -190px;
+    left: 70px;
+    position: relative; }
+  #eupchat #chat-rooms-container .chatbox .bttn-send {
+    position: relative;
+    width: 50px;
+    top: -190px;
+    left: 70px; }
+#eupchat #eupchat-users {
+  float: left;
+  width: 100%;
+  height: calc(100% - 110px );
+  background-color: #d9d9d9;
+  padding: 5px;
+  margin-bottom: 0; }
+  #eupchat #eupchat-users li {
+    list-style: none;
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+    #eupchat #eupchat-users li:hover {
+      background-color: #004873;
+      color: #FFFFFF;
+      cursor: pointer; }
+    #eupchat #eupchat-users li .name {
+      display: inline;
+      font-size: 14px; }
+    #eupchat #eupchat-users li .avatar {
+      display: inline-block;
+      float: left;
+      margin-right: 10px;
+      position: relative; }
+      #eupchat #eupchat-users li .avatar img {
+        width: 32px; }
+      #eupchat #eupchat-users li .avatar:after {
+        display: inline-block;
+        content: "";
+        bottom: 0px;
+        right: 12px;
+        width: 12px;
+        height: 12px;
+        background-color: #c63c2c;
+        border-radius: 50%; }
+    #eupchat #eupchat-users li.online .avatar:after {
+      background-color: MediumSeaGreen; }
+#eupchat #eupchat-toolbars {
+  background-color: #d9d9d9;
+  height: 110px; }
+  #eupchat #eupchat-toolbars #eupchat-search {
+    width: 90%;
+    margin: 5px 5%; }
+#eupchat #div-chat {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  right: 10px;
+  border-bottom: 10px; }
+#eupchat .right-chat {
+  float: right;
+  width: 70%;
+  background-color: white;
+  height: 100%; }
+#eupchat #div-chatheader {
+  height: 30px;
+  width: 100%;
+  background-color: #0a86cf;
+  color: black;
+  text-align: center;
+  cursor: move; }
+#eupchat .hide-this {
+  display: none; }
+
+#eupchat_setting {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #FFFFFF;
+  display: table; }
+  #eupchat_setting .eupchat-tabs {
+    display: table-cell;
+    width: 200px; }
+  #eupchat_setting #eupchat-tab1 {
+    display: table-cell; }
+  #eupchat_setting #eupchat_btn_form_close {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px; }
+
+#eupchat_btn_setting {
+  float: right; }
+
+.eupchat-auto-message {
+  position: relative; }
+  .eupchat-auto-message .popup-message-template {
+    background: #e4e4e4;
+    position: absolute;
+    bottom: 100%;
+    left: 0px; }
+
+.eupchat-tabs li.active {
+  background-color: #004873;
+  color: #FFFFFF; }
+
+.eupchat-tab-content {
+  display: none; }
+  .eupchat-tab-content.active {
+    display: block; }
+
+/*# sourceMappingURL=style.css.map */

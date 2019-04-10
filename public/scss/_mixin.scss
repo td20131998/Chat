@@ -1,0 +1,201 @@
+/* Mixin style */
+
+/* animation */
+@mixin animation($value) {
+    -webkit-animation: $value;
+    -moz-animation: $value;
+    -o-animation: $value;
+    animation: $value;
+}
+
+/* appearance */
+@mixin appearance ($value) {
+    -webkit-appearance: $value;
+    -moz-appearance: $value;
+    appearance: $value;
+}
+
+/* border radius */
+@mixin border-radius($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+/* box-shadow */
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+/* custome font */
+@mixin fontcallunaBold() {
+   -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga" 1, "dlig" 1;
+    -o-font-feature-settings: "liga" 1, "dlig" 1;
+    -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+    font-feature-settings: "liga" 1, "dlig" 1;
+}
+/* filter */
+@mixin filter($filter-string) {
+    -webkit-filter: $filter-string;
+    -moz-filter: $filter-string;
+    -ms-filter: $filter-string;
+    -o-filter: $filter-string;
+    filter: $filter-string;
+}
+
+/* transform */
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+}
+
+/* transition */
+@mixin transition($transition: all 0.3s ease) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin button-style(){
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    background: #13673f none repeat scroll 0 0;
+    color: #fff;
+}
+
+/* placeholder */
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        color: $color;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+}
+@mixin placeholder-line-height($height) {
+    &::-webkit-input-placeholder {
+        line-height: $height;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        line-height: $height;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+        line-height: $height;
+    }
+    &:-ms-input-placeholder {
+        line-height: $height;
+    }
+}
+@mixin placeholder-opacity($opacity) {
+    &::-webkit-input-placeholder {
+        opacity: $opacity;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        opacity: $opacity;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+        opacity: $opacity;
+    }
+    &:-ms-input-placeholder {
+        opacity: $opacity;
+    }
+}
+
+@mixin box-style($background_color, $box_shadow_color) {
+    background: $background_color none repeat scroll 0 0;
+    border-radius: 5px;
+    box-shadow: 0 0 4px $box_shadow_color inset;
+    padding:10px 15px;
+}
+
+/* opacity */
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    filter: alpha(opacity=$opacity*100);
+}
+
+@mixin background-opacity($value){
+    background: rgba(0, 0, 0, $value);
+}
+
+@mixin absolute-center-middle(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin clear-after(){
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/* breakpoint with one condition(min or max) */
+$mq-support: true !default;
+$mq-fixed-value: 1024px;
+
+@mixin bp($feature, $value) {
+    // Set global device param
+    $media: only screen;
+
+    // Media queries supported
+    @if $mq-support == true {
+
+        @media #{$media} and ($feature: $value) {
+            @content;
+        }
+
+        // Media queries not supported
+    } @else {
+
+        @if $feature == 'min-width' {
+            @if $value <= $mq-fixed-value {
+                @content;
+            }
+        } @else if $feature == 'max-width' {
+            @if $value >= $mq-fixed-value {
+                @content;
+            }
+        }
+
+    }
+}
+
+/* breakpoint with two conditions (min and max) */
+@mixin small-bp($min-width, $max-width) {
+    // Set global device param
+    $media: only screen;
+    // Media queries supported
+    @if $mq-support == true {
+        @media #{$media} and ('min-width': $min-width) and ('max-width': $max-width) {
+            @content;
+        }
+    }
+}

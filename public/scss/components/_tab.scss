@@ -1,0 +1,14 @@
+.eupchat-tabs{
+  li{
+    &.active{
+      background-color: $c-green;
+      color: $c-white;
+    }
+  }
+}
+.eupchat-tab-content{
+  display: none;
+  &.active{
+    display: block;
+  }
+}

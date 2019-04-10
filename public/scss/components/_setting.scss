@@ -1,0 +1,26 @@
+#eupchat_setting{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: $c-white;
+  display: table;
+  .eupchat-tabs{
+    display: table-cell;
+    width: 200px;
+  }
+  #eupchat-tab1{
+    display: table-cell;
+  }
+
+  #eupchat_btn_form_close{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+}
+#eupchat_btn_setting{
+  float: right;
+}

@@ -1,0 +1,91 @@
+/* Variables */
+/* Break point */
+/* text */
+/* Mixin */
+/* Mixin style */
+/* animation */
+/* appearance */
+/* border radius */
+/* box-shadow */
+/* custome font */
+/* filter */
+/* transform */
+/* transition */
+/* placeholder */
+/* opacity */
+/* breakpoint with one condition(min or max) */
+/* breakpoint with two conditions (min and max) */
+/*global*/
+#eup-chat-service {
+  background-color: white;
+  border: 1px solid #000000;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 9999;
+  width: 600px; }
+
+#eup-chat-service #history {
+  background: #FFF;
+  border: 2px solid #eb5424;
+  height: 350px; }
+#eup-chat-service #main-chat {
+  width: 100%; }
+#eup-chat-service .chatbox {
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  border: 1px solid #302F31;
+  background-color: rgba(0, 0, 0, 0.2); }
+#eup-chat-service div.messages {
+  height: 200px;
+  background-color: white;
+  overflow: auto; }
+#eup-chat-service .count-message {
+  color: red;
+  margin-left: 10px; }
+#eup-chat-service .room_title {
+  background-color: darkgreen;
+  color: #ffffff;
+  font-weight: bold; }
+#eup-chat-service #chat-rooms-container {
+  background-color: #ffffff;
+  width: 100%;
+  height: 350px; }
+
+#eup-chat-service #users {
+  height: 350px;
+  background-color: white;
+  padding-left: 0px; }
+  #eup-chat-service #users li {
+    list-style: none;
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+    #eup-chat-service #users li:hover {
+      background-color: #004873;
+      color: #FFFFFF;
+      cursor: pointer; }
+  #eup-chat-service #users .avatar {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    position: relative; }
+    #eup-chat-service #users .avatar img {
+      width: 32px; }
+    #eup-chat-service #users .avatar:after {
+      display: inline-block;
+      content: "";
+      bottom: 0px;
+      right: 12px;
+      width: 12px;
+      height: 12px;
+      background-color: #c63c2c;
+      border-radius: 50%; }
+    #eup-chat-service #users .avatar.online:after {
+      background-color: MediumSeaGreen; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,305 @@
+#eupchat{
+    background-color: white;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    width: 850px;
+    height: 520px;
+    min-width: 850px;
+    min-height: 520px;
+    border: 1px solid $c-gray;
+    resize: both;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    &.max{
+       top: 0!important;
+       left: 0!important;
+       width: 100% !important;
+       height: 100% !important;
+    }
+    &.min{
+        bottom: 10px!important;
+        right: 10px!important;
+        width: 700px;
+        height: 520px;
+    }
+    &.close-w{
+        top: unset !important;
+        left: unset !important;
+        bottom: 10px!important;
+        right: 10px!important;
+        width: 400px !important;
+        height: 30px !important;
+        min-width: 0px;
+        min-height: 0px;
+        #eupchat-main-chat{
+            display: none;
+        }
+    }
+    #eupchat-main-chat{
+
+        display: table;
+    }
+    .eupchat-left{
+        display: table-cell;
+        vertical-align: top;
+        width: 250px;
+        border: solid 1px #d9d9d9   ;
+    }
+    .eupchat-right{
+        display: table-cell;
+        vertical-align: top;
+        #eupchat-tool{
+            padding-top: 35px;
+            background: white;
+            .eupchat-upload-image{
+                position: relative;
+                float: left;
+                width: 30px;
+                height: 28px;
+                overflow: hidden;
+                background-image: url(/public/images/icon-all.png);
+                background-position: -244px -1447px;
+                margin-right: 5px;
+                top: -30px;
+                input{
+                    opacity: 0.0;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                }
+            }
+            .eupchat-upload-file{
+                position: relative;
+                float: left;
+                width: 28px;
+                height: 28px;
+                overflow: hidden;
+                background-image: url(/public/images/icon-all.png);
+                background-position: -245px -1418px;
+                margin-right: 5px;
+                top: -30px;
+                input{
+                    opacity: 0.0;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .eupchat-auto-message{
+                position: relative;
+                top: -34px;
+                left: 0px;
+                float: left;
+                .popup-message-template{
+                    width: 250px;
+                }
+            }
+        }
+    }
+    #eupchat_setting{
+        .eupchat-setting-tab{
+            padding: 0 10px;
+        }
+        #form-upload-avatar{
+            input[type="file"]{
+                opacity: 0.5;
+            }
+            input[type="button"]{
+                width: 65px;
+                border-radius: 4px;
+                background: #009688;
+                color: #fff;
+            }
+        }
+        #eupchat-setting-2{
+            height: 100%;
+            ul{
+                list-style-type: none;
+            }
+            ul>li>textarea{
+                width: calc(100% - 50px);
+                height: 30px;
+
+            }
+            ul>li> .btn-remove-messagetemplate{
+                height: 30px;
+                overflow: hidden;
+                position: relative;
+                top: -10px;
+                left: 4px;
+
+                img{
+                    width: 24px;
+                }
+            }
+            #eupchat-btn-addmore-messagetempalte{
+                border-radius: 4px;
+                background: #009688;
+                color: #fff;
+                float: right;
+                margin-right: 20px;
+            }
+            .eupchat-form-setting-actions{
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+                button{
+                    border-radius: 4px;
+                    background: #009688;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    #eupchat-header{
+      cursor: move;
+      background-color: #009688 ;
+      padding-left: 20px;
+      height: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      .eupchat-min-max-control{
+          float: right;
+          cursor: pointer;
+          .eupchat-min  .eupchat-max .eupchat-normal{
+
+          }
+      }
+    }
+
+    .eupchat-min-max-control{
+        float: right;
+        img{
+            height: 16px;
+            margin: 5px;
+        }
+    }
+    #eupchat-my-account{
+        float: left;
+        margin: 5px 10px;
+    }
+}
+
+#eupchat{
+    #history {
+        background: #FFF;
+        border: 2px solid #eb5424;
+        height: 350px;
+    }
+    #main-chat{
+        width: 100%;
+
+    }
+    div.messages{
+        background-color: white;
+        overflow: auto;
+        height: calc(100% - 75px);
+    }
+    .count-message{
+        color: red;
+        margin-left: 10px;
+    }
+    .room_title{
+        background-color: #d9d9d9;
+        color: #000;
+        font-weight: bold;
+        padding-left: 15px;
+        height: 40px;
+        padding-top: 5px;
+        img{
+            width: 30px;
+            margin: 0 10px 0 0;
+        }
+    }
+    #chat-rooms-container{
+        background-color: #ffffff;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      .chatbox{
+        .messages{
+          img{
+            max-width: 150px;
+          }
+          .message-item{
+               &.not-mine{
+                   .user-info{
+                       text-align: left;
+                       margin-left: 10px;
+                       .avatar{
+                           float: left;
+                       }
+                   }
+                   .message-content{
+                       position: relative;
+                       padding-top: 5px;
+                       text-align: left;
+                       padding-left: 10px;
+                       .time{
+                           position: absolute;
+                           float: left;
+                           font-size: 11px;
+                           top: -18px;
+                           left: 150px;
+                       }
+                   }
+
+               }
+               &.mine{
+                   .user-info{
+                       text-align: right;
+                       margin-right: 10px;
+                       .avatar{
+                           float: right;
+                       }
+                   }
+                   .message-content{
+                       position: relative;
+                       padding-top: 5px;
+                       text-align: right;
+                       padding-right: 10px;
+                       .time{
+                           position: absolute;
+                           float: right;
+                           font-size: 11px;
+                           top: -18px;
+                           right: 150px;
+                       }
+                   }
+              }
+          }
+        }
+      }
+    }
+    .chat-header{
+        background-color: #528db1;
+        padding-left: 10px;
+        height: 30px;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: move;
+    }
+    #formUploadfile {
+        float: left;
+        height: 40px;
+        padding: 8px;
+        min-width: 300px;
+    }
+    #btnUploadfile{
+        float: left;
+        margin: 5px;
+    }
+}
+
+#eupchat-main-chat{
+    position: relative;
+    height: calc(100% - 40px);
+    overflow: hidden;
+}
